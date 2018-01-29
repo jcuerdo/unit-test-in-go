@@ -4,10 +4,6 @@ import (
 	"fmt"
 )
 
-type CalculatorInterface interface{
-	Division(x int64, y int64) (int64, error)
-}
-
 type Calculator struct{
 
 }
