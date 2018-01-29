@@ -24,6 +24,9 @@ func TestProcessOneTime(t *testing.T){
 
 	pr :=  &process.Process{SubProcess:subProcessMock}
 
+	//PHP
+	// $this->expects($this->once())->method("RunSubProcess")->with(0)->willReturn(new Result())
+
 	subProcessMock.On("RunSubProcess",0).Return(process.Result{}, nil)
 
 	result , error := pr.RunProcess(1)
